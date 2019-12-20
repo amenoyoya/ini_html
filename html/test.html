@@ -1,0 +1,24 @@
+<!-- 以下のメタ文字列は無視される -->
+::meta::
+    title = "PHPテンプレートのコンテンツだけ別ファイル（別サーバ）管理する方法"
+    keywords[] = "PHP"
+    keywords[] = "parse_ini_string"
+    keywords[] = "ドメイン特化言語"
+    description = "コンテンツだけ別ファイル（別サーバ）で管理したい場合に、htmlメタ情報（title, description）を上手く処理する方法"
+::end::
+
+<h1 class="title">PHPテンプレートのコンテンツだけ別ファイル（別サーバ）管理する方法</h1>
+<p class="subtitle">
+    コンテンツだけ別ファイル（別サーバ）で管理したい場合に、htmlメタ情報（title, description）を上手く処理する方法
+</p>
+
+<hr>
+
+<h2 class="title">PHPを埋め込む</h2>
+<p>予期しないPHPコードが実行される危険性がある</p>
+
+<hr>
+
+<h2 class="title">ドメイン特化言語を埋め込む</h2 class="title">
+<p>コンテンツ内で特殊な文字列を定義し、それを処理させるのが安全と考える</p>
+<p>今回の場合 <code>::meta::</code> ～ <code>::end::</code> で iniテキストを定義し、<code>parse_ini_string</code> で処理させている</p>
